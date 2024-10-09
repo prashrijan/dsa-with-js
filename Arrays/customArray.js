@@ -28,6 +28,7 @@ class customArray{
 
     shift(){
         
+        // reindexing
         for(let i = 0; i < this._length; i++){
             this._data[i] = this._data[i + 1]
         }
@@ -35,6 +36,18 @@ class customArray{
         delete this._data[this._length - 1]
         this._length--
 
+    }
+
+    deleteByIndex(index){
+
+        // reindex
+        for(let i = index; i < this._length; i++){
+            this._data[i] = this._data[i + 1]
+        }
+
+        delete this._data[this._length - 1]
+
+        this._length--
     }
 
 }
@@ -50,7 +63,7 @@ myArray.push("array")
 
 
 console.log(myArray);
-myArray.shift()
+myArray.deleteByIndex(3)
 console.log(myArray);
 
 
