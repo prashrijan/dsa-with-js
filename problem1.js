@@ -1,8 +1,11 @@
+// Data Structure
 const students = ["Prash", "Shubik", "Anuska", "Asmita", "Pawan"]
 
+
+// Algorithm 
 function findStudent(students, studentName){
 
-    if(students.length <=0 ) return -1
+    if(students.length <= 0 ) return -1
 
     for(let i = 0; i < students.length; i++){
         if(students[i] === studentName){
