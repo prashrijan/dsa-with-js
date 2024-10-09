@@ -26,6 +26,7 @@ class customArray{
         this._length--
     }
 
+    // shift method
     shift(){
         
         // reindexing
@@ -38,6 +39,7 @@ class customArray{
 
     }
 
+    // delete by index method
     deleteByIndex(index){
 
         // reindex
@@ -63,7 +65,7 @@ myArray.push("array")
 
 
 console.log(myArray);
-myArray.deleteByIndex(3)
+myArray.deleteByIndex(5)
 console.log(myArray);
 
 
