@@ -106,6 +106,19 @@ class LinkedList {
 
         return temp
     }
+
+    // get by index method
+    get(index){
+        let counter = 0
+        let temp = this.head
+
+        while(counter !== index){
+            temp = temp.next
+            counter++
+        }
+
+        return temp
+    }
 }
 
 const myLinkedList = new LinkedList(1)
@@ -116,6 +129,7 @@ myLinkedList.unshift(5)
 myLinkedList.shift()
 console.log(myLinkedList.getFirst())
 console.log(myLinkedList.getLast());
+console.log(myLinkedList.get(0));
 
 
 console.log(myLinkedList);
