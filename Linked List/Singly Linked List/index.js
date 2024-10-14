@@ -155,7 +155,26 @@ class LinkedList {
         return true
     }
 
-    // 
+    // size method
+    size(){
+
+        let counter = 0
+        let temp = this.head
+
+        while(temp.next){
+            temp = temp.next
+            counter++
+        }
+
+        return counter
+    }
+
+    // clear method
+    clear(){
+        this.head = null
+        this.tail = null
+        this.length = 0
+    }
 }
 
 const myLinkedList = new LinkedList(1)
@@ -164,14 +183,14 @@ myLinkedList.push(2)
 // myLinkedList.pop()
 myLinkedList.unshift(5)
 myLinkedList.shift()
-console.log(myLinkedList.getFirst())
-console.log(myLinkedList.getLast());
-console.log(myLinkedList.get(0));
-myLinkedList.set(0, 10)
-console.log(myLinkedList);
+// console.log(myLinkedList.getFirst())
+// console.log(myLinkedList.getLast());
+// console.log(myLinkedList.get(0));
+// myLinkedList.set(0, 10)
 
 myLinkedList.insert(1, 20)
-
+// console.log(myLinkedList.size())
+myLinkedList.clear()
 
 console.log(myLinkedList);
 
