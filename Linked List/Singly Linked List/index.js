@@ -77,10 +77,16 @@ class LinkedList {
         this.length--
 
         if(this.length === 0){
-            this.head = null
             this.tail = null
         }
     }
+
+    // getFirst method
+    getFirst(){
+        return this.head
+    }
+
+
 }
 
 const myLinkedList = new LinkedList(1)
@@ -89,6 +95,7 @@ myLinkedList.push(2)
 // myLinkedList.pop()
 myLinkedList.unshift(5)
 myLinkedList.shift()
+console.log(myLinkedList.getFirst())
 
 console.log(myLinkedList);
 
