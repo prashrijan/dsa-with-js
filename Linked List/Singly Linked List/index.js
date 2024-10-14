@@ -125,7 +125,11 @@ class LinkedList {
 
         let node = this.get(index)
 
-        node.head = value
+        if(node){
+            node.value = value
+            return true
+        }
+        return false
     }
 }
 
