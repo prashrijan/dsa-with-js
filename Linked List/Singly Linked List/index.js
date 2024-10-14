@@ -119,6 +119,14 @@ class LinkedList {
 
         return temp
     }
+
+    // set method
+    set(index, value){
+
+        let node = this.get(index)
+
+        node.head = value
+    }
 }
 
 const myLinkedList = new LinkedList(1)
@@ -130,6 +138,7 @@ myLinkedList.shift()
 console.log(myLinkedList.getFirst())
 console.log(myLinkedList.getLast());
 console.log(myLinkedList.get(0));
+myLinkedList.set(0, 10)
 
 
 console.log(myLinkedList);
