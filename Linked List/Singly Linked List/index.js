@@ -15,6 +15,7 @@ class LinkedList {
         this.length = 1
     }
 
+    // push method
     push(value){
         let newNode = new Node(value)
 
@@ -27,11 +28,26 @@ class LinkedList {
         this.tail = newNode
         this.length++
     }
+
+    // pop method
+    pop(){
+        let temp = this.head
+        let prev = this.head
+
+        while(temp.next){
+            prev = temp
+            temp = prev.next
+        }
+        this.tail = prev
+        this.tail.next = null
+        this.length--
+    }
 }
 
 const myLinkedList = new LinkedList(1)
 
 myLinkedList.push(2)
+myLinkedList.pop()
 
 console.log(myLinkedList);
 
