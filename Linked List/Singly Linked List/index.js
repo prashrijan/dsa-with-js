@@ -83,10 +83,29 @@ class LinkedList {
 
     // getFirst method
     getFirst(){
+
+        if(!this.head){
+            return null
+        }
+
         return this.head
     }
 
 
+    // getLast method
+    getLast(){
+        if(!this.head){
+            return null
+        }
+
+        let temp = this.head
+
+        while(temp.next){
+            temp = temp.next
+        }
+
+        return temp
+    }
 }
 
 const myLinkedList = new LinkedList(1)
@@ -96,6 +115,8 @@ myLinkedList.push(2)
 myLinkedList.unshift(5)
 myLinkedList.shift()
 console.log(myLinkedList.getFirst())
+console.log(myLinkedList.getLast());
+
 
 console.log(myLinkedList);
 
