@@ -52,6 +52,24 @@ class DoublyLinkedList{
 
         this.length--
     }
+
+    // unshift method
+    unshift(value){
+
+        let newNode = new Node(value)
+
+        if(!this.head){
+            this.head = newNode
+            this.tail = newNode
+        }
+
+        newNode.next = this.head
+        this.head.prev = newNode
+        this.head = newNode
+
+        this.length++
+        
+    }
 }
 
 
@@ -61,5 +79,7 @@ myDoublyLinkedList.push(3)
 myDoublyLinkedList.push(4)
 
 myDoublyLinkedList.pop()
+
+myDoublyLinkedList.unshift(7)
 
 console.log(myDoublyLinkedList);
