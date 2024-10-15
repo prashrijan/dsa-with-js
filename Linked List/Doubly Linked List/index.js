@@ -70,6 +70,22 @@ class DoublyLinkedList{
         this.length++
         
     }
+
+    // shift method
+    shift(){
+
+        if(this.length === 0){
+            return null
+        }
+
+        let temp = this.head
+
+        this.head = temp.next
+        this.head.prev = null
+        temp.next = null
+
+        this.length--
+    }
 }
 
 
@@ -81,5 +97,8 @@ myDoublyLinkedList.push(4)
 myDoublyLinkedList.pop()
 
 myDoublyLinkedList.unshift(7)
+myDoublyLinkedList.unshift(8)
+
+myDoublyLinkedList.shift()
 
 console.log(myDoublyLinkedList);
