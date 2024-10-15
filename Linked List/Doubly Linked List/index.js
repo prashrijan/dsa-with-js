@@ -31,4 +31,32 @@ class DoublyLinkedList{
 
         this.length++
     }
+
+    // pop method
+    pop(){
+        if(this.length === 0){
+            return null
+        } 
+
+        let temp = this.head
+
+        while(temp.next){
+            temp = temp.next
+        }
+
+        this.tail = temp.prev
+        this.tail.next = null
+
+        this.length--
+    }
 }
+
+
+const myDoublyLinkedList = new DoublyLinkedList(1)
+myDoublyLinkedList.push(2)
+myDoublyLinkedList.push(3)
+myDoublyLinkedList.push(4)
+
+myDoublyLinkedList.pop()
+
+console.log(myDoublyLinkedList);
