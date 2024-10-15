@@ -38,14 +38,17 @@ class DoublyLinkedList{
             return null
         } 
 
-        let temp = this.head
-
-        while(temp.next){
-            temp = temp.next
+        if(this.length === 1){
+            this.head = null
+            this.tail = null
         }
+
+        let temp = this.tail
 
         this.tail = temp.prev
         this.tail.next = null
+
+        temp.prev = null
 
         this.length--
     }
