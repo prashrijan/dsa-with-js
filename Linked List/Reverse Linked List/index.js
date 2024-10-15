@@ -33,7 +33,6 @@ class LinkedList {
         this.head = this.tail
         this.tail = temp
 
-
         let next = temp
         let prev = null
 
