@@ -78,6 +78,11 @@ class DoublyLinkedList{
             return null
         }
 
+        if(this.length === 1){
+            this.head = null
+            this.tail = null
+        }
+
         let temp = this.head
 
         this.head = temp.next
