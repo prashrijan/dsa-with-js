@@ -51,4 +51,6 @@ myQueue.enqueue(4)
 myQueue.enqueue(6)
 myQueue.enqueue(8)
 
+myQueue.dequeue()
+
 console.log(myQueue);
