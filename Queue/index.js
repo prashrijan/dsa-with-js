@@ -25,10 +25,23 @@ class Queue{
             this.last = newNode
         }
 
-        newNode.next = this.last
+        this.last.next = newNode
         this.last = newNode
 
         this.length++
+    }
+
+
+    dequeue(){
+        if(this.length === 0){
+            return null
+        }
+
+        let temp = this.first
+        this.first = this.first.next
+        temp.next =  null
+
+        this.length--
     }
 }
 

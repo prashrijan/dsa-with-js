@@ -37,7 +37,7 @@ class Stack{
         let temp = this.first
 
         this.first = temp.next
-        temp = null
+        temp.next = null
 
         this.length--
     }
