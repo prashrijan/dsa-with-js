@@ -41,6 +41,46 @@ class Stack{
 
         this.length--
     }
+
+
+    min(){
+        if(this.length === 0){
+            return null
+        }
+
+        let current = this.first
+        let minVal = current.value
+
+        while(current.next){
+            current = current.next
+
+            if(current.value < minVal){
+                minVal = current.value
+            }
+        }
+
+        return minVal
+    }
+
+    max(){
+
+        if(this.length === 0){
+            return null
+        }
+
+        let current = this.first
+        let maxVal = current.value
+
+        while(current.next){
+            current = current.next
+            
+            if(current.value > maxVal){
+                maxVal = current.value
+            }
+        }
+
+        return maxVal
+    }
 }
 
 
@@ -48,7 +88,9 @@ let myStack = new Stack(1)
 myStack.push(2)
 myStack.push(3)
 
+console.log(myStack.min())
+// myStack.pop()
+console.log(myStack.max());
 
-myStack.pop()
 
 console.log(myStack);
