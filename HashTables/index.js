@@ -16,4 +16,17 @@ class HashTable{
 
         return sum
     }
+
+    set(key, value){
+        const index = this._hashFunction(key)
+
+        if(!this.keyMap[index]) this.keyMap = []
+
+        this.keyMap[index].push(key, value)
+        return this
+    }
 }
+
+const phoneBook = new HashTable()
+
+phoneBook.set('john', '0450528184')
