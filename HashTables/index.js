@@ -40,11 +40,48 @@ class HashTable{
 
         return undefined
     }
+
+    getAllKeys(){
+
+        const keys = []
+
+        for(let i = 0; i < this.keyMap.length; i++){
+            if(this.keyMap[i]){
+                for(let j = 0; j < this.keyMap[i].length; j++){
+                    keys.push(this.keyMap[i][j][0])
+                }
+            }
+        }
+
+        return keys
+
+    }
+
+
+    getAllValues(){
+
+        const values = []
+
+        for(let i = 0; i < this.keyMap.length; i++){
+            if(this.keyMap[i]){
+                for(let j = 0; j < this.keyMap[i].length; j++){
+                    values.push(this.keyMap[i][j][1])
+                }
+            }
+        }
+
+        return values
+    }
 }
 
 const phoneBook = new HashTable()
 
 phoneBook.set('john', '0450528184')
+phoneBook.set('michael', '9842485790')
+phoneBook.set('jordan', '9842637116')
 console.log(phoneBook.get('john'))
+
+console.log(phoneBook.getAllKeys())
+console.log(phoneBook.getAllValues())
 
 console.log(phoneBook);
