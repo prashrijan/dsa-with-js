@@ -26,13 +26,25 @@ class HashTable{
         return this
     }
 
-    get(){
+    get(key){
+        const index = this._hashFunction(key)
 
+        if(this.keyMap[index]){
+            for(let i = 0; i < this.keyMap[index].length; i++){
+                
+                if(this.keyMap[index][i][0] === key){
+                    return this.keyMap[index][i][1]
+                }
+            }
+        }
+
+        return undefined
     }
 }
 
 const phoneBook = new HashTable()
 
 phoneBook.set('john', '0450528184')
+console.log(phoneBook.get('john'))
 
 console.log(phoneBook);
