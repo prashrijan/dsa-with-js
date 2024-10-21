@@ -13,5 +13,7 @@ class HashTable{
 
             sum = (sum * PRIME_NUMBER + charCode) % this.keyMap.length
         }
+
+        return sum
     }
 }
