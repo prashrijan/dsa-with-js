@@ -43,6 +43,35 @@ class BST{
             }
         }
     }
+
+    includes(value){
+
+        if(this.root === null){
+            return null
+        }
+
+        if(this.root.value === value){
+            return true
+        }
+
+        let temp = this.root
+
+        while(temp.left || temp.right){
+            if(value < temp.value){
+                temp = temp.left
+                if(value === temp.value){
+                    return true
+                }
+            }else{
+                temp = temp.right
+                if(value === temp.value){
+                    return true
+                }
+            }
+        }
+
+        return false
+    }
 }
 
 let myTree = new BST()
@@ -53,5 +82,7 @@ myTree.insert(7)
 myTree.insert(1)
 myTree.insert(2)
 myTree.insert(3)
+
+console.log(myTree.includes(8))
 
 console.log(myTree);
