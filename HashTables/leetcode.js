@@ -17,7 +17,7 @@ const wordCounter = (text) => {
         }
     }
     
-    return map 
+    return Object.fromEntries(map) 
     
 }
 
