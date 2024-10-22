@@ -50,23 +50,15 @@ class BST{
             return null
         }
 
-        if(this.root.value === value){
-            return true
-        }
-
         let temp = this.root
 
-        while(temp.left || temp.right){
+        while(temp != null){
             if(value < temp.value){
                 temp = temp.left
-                if(value === temp.value){
-                    return true
-                }
-            }else{
+            }else if(value > temp.value){
                 temp = temp.right
-                if(value === temp.value){
-                    return true
-                }
+            }else{
+                return true
             }
         }
 
